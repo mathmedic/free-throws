@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Is Mrs. Gallas a Good Free Throw Shooter?</title>
+        <link rel="icon" href="ASSETS/favicon.ico" type="image/x-icon"/>
+
+        <!-- External Libraries for Graphing and Lottie Animation-->
+
+        <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.13.0/build/player/lottie.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+
+        <!-- Math Medic JS -->
+        <script src="JS/mmapplets.js"></script>
+        <script src="JS/freethrow.js"></script>
+
+        <link rel="stylesheet" href="CSS/mmapplets.css">
+        <link rel="stylesheet" href="CSS/freethrow.css">
+    </head>
+    <body>
+        <div class="pageHeader">
+            <img class="headerImage" src="ASSETS/math-medic-logo.svg" alt="Math Medic Logo">
+            <p class="headbarTitle"><a href="https://portal.mathmedic.com/lesson-plans/course/ap-statistics-26-27/unit/7/day/1" target="_blank">Is Mrs. Gallas a Good Free Throw Shooter?</a></p>
+        </div>
+        <div class="pageContent">
+            <h3 id="explanationText">
+                Mrs. Gallas claims she is a 70% free throw shooter, but Mr. Wilcox believes she is not that good. To prove her skills, she shoots 50 free throws and makes 28 shots.
+                <br />
+                To test Mrs. Gallas’ claim, we will assume that her claim is true (she is a 70% free throw shooter) and then estimate the probability of getting her result (28 out of 50) purely by chance.
+            </h3>
+            <label for="truePercentageInputContainer" id="trueInputLabel">True percentage of free throws Mrs. Gallas makes: <input type="text" class="numberInput" id="trueInputContainer"/> %</label>
+            <div id="sectionContainer">
+                
+                <div class="section" id="section1">
+                    <div class="flexRow" id="sec1">
+                        <div class="flexCol" id="sec2">
+                            <div class="lottieAnimationBox">
+                                <div id="lottieAnimationMAKE"></div>
+                                <div id="lottieAnimationMISS"></div>
+                            </div>
+                            <div id="shotsInfoOutput1Div">
+                                <p id="shotsLabel">Shots:</p>
+                                <p id="shotsInfoOutputText">N/A</p>
+                            </div>
+                            <div id="takeShotsButton">
+                                <button id="shootButton">Shoot!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="section2">
+                    <div id="graphAnalysisDiv" class="flexCol">
+                        <div id="graphOutput"></div>
+                        <div id="graphAnalysisEntry">
+                            
+                        </div>
+                    </div>
+                    <div id="fnsAndQuickAdd" class="flexCol">
+                        <div id="quickAddDiv">
+                            <label for="quickAddInput">Quickly add <input type="text" id="quickAddInput" class="numberInput"> simulations (one simulation = 50 shots). <button id="quickAddSimsBtn">Add</button></label>
+                        </div>
+                        <div id="analyzeDataDiv">
+                            <label for="analyzeDataInput">Count number and percent of samples 
+                                <select id="lOrRSelDropdown">
+                                    <option value="greater">greater</option>
+                                    <option value="less">less</option>
+                                </select> than or equal to 
+                                <input type="text" class="numberInput" id="analyzeDataInput">
+                                <button id="countBtn">Count</button>
+                                <button id="removeCountBtn">Hide</button>
+                            </label>
+                            <p id="outputAnalyzedCount"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
